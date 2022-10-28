@@ -17,6 +17,7 @@ jobs:
   clone_demo:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: ls -al
       - run: python four.py
       - run: ./hello.sh
