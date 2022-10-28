@@ -15,7 +15,7 @@ jobs:
     - run: echo 'Job status is ${{job.status}}'
     
  clone_demo:
-  runs-on: ubunti-latest
+  runs-on: ubuntu-latest
   steps:
   - run: python four.py
   - run: ./hello.sh
