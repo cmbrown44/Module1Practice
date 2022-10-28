@@ -4,26 +4,26 @@ name: GitActionsDemo # just name of the workflow
 on: [push] # In what event does this workflow run
 
 jobs:
- action_demo:
-   #runs - on: what type of OS is pipeline running on
-   runs-on: ubuntu-latest
-   # for this job what do you want it to do?
-   steps:
-    - run: echo 'Hello World'
-    - run: pwd
-    - run: ls
-    - run: echo 'Job status is ${{job.status}}'
-    
- clone_demo:
-  runs-on: ubuntu-latest
-  steps:
-  - run: ls -al
-  - run: python four.py
-  - run: ./hello.sh
+  action_demo:
+    #runs - on: what type of OS is pipeline running on
+    runs-on: ubuntu-latest
+    # for this job what do you want it to do?
+    steps:
+      - run: echo 'Hello World'
+      - run: pwd
+      - run: ls
+      - run: echo 'Job status is ${{job.status}}'
   
+  clone_demo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls -al
+      - run: python four.py
+      - run: ./hello.sh
+    
   stretch_demo:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    with:
-      repository: Reece-elder.M1-Demo
+      - uses: actions/checkout@v3
+        with:
+          repository: Reece-elder.M1-Demo
