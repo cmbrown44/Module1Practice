@@ -27,3 +27,13 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: Reece-elder/M1-Demo
+
+  variable_job:
+    env:
+      SECRET_TEXT: ${{secrets.MY_SECRET_281022}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print global variable
+      run: echo $GLOBAL_VAR
+    - name: Print secret variable
+      run: echo $SECRET_TEXT
